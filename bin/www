@@ -9,6 +9,10 @@ var debug = require('debug')('migrator:server');
 var http = require('http');
 require('dotenv').config()
 const axios = require('axios');
+const path=require("path");
+const fs=require("fs");
+
+const myPath=path.join(__dirname,"../build","migration_list.json");
 /**
  * Get port from environment and store in Express.
  */
@@ -128,7 +132,7 @@ const getEnvironmentVariables= async(list)=>{
                 //console.log(listApp);
               }
     })
-    console.log(listApp)
+    //console.log(listApp)
     return listApp
   })
 }
@@ -154,7 +158,11 @@ const getHerokuApps=async ()=>{
   });
   console.log(filtered);
  const lista= await getEnvironmentVariables(filtered);
- console.log("lista",lista);
+ //console.log("lista",lista);
+ fs.writeFile(myPath,JSON.stringify(lista),err=>{
+  if(err) throw err;
+  console.log("file written");
+ });
   
   
       
