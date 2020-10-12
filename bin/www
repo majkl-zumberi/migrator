@@ -87,7 +87,14 @@ const getHerokuApps=()=>{
     }
   })
   .then(function (response) {
-    console.log(response);
+    //console.log(response);
+    const filtered=response.data.map(app=>{
+      return {
+        name:app.name,
+        id:app.id
+      }
+    });
+    console.log("filtrato:",filtered);
   })
   .catch(function (error) {
     console.log(error);
