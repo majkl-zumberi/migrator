@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "serve": "nodemon --inspect -e js,html,sql,css,scss,pug ./bin/www",
+    "serve": "nodemon --inspect -e www,js,html,sql,css,scss,pug ./bin/www",
     "start": "node ./bin/www"
   },
   "dependencies": {
