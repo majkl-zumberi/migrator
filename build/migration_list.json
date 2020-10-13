@@ -1,0 +1,1 @@
+{"migrate":[{"name":"migrate01","id":"1e73eb95-c5ce-4dd2-91dc-967cbcbc43cf","MONGODB_URI":"mongodb://localhost:27017/authJWT"},{"name":"migrate02","id":"882159e1-0c49-4a57-9db9-fd1bf3368d44","MONGODB_URI":"mongodb://localhost:27017/testing"}],"check":[{"name":"mighty-wildwood-24581","id":"65dc8bef-87cf-40af-9bac-6dcaa13b2e48"}]}
