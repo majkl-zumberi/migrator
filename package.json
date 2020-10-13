@@ -1,22 +1,19 @@
 {
   "name": "migrator",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
-    "serve": "nodemon --inspect -e www,js,html,sql,css,scss,pug ./bin/www",
-    "start": "node ./bin/www"
+    "generate": "node generateList",
+    "migrate": "node migrateDB"
   },
   "dependencies": {
     "axios": "^0.20.0",
     "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
-    "express": "~4.16.1",
     "http-errors": "~1.6.3",
-    "minimist": "^1.2.5",
-    "morgan": "~1.9.1"
+    "mongo-copydb": "^1.0.4",
+    "mongodb-uri": "^0.9.7"
   },
   "devDependencies": {
-    "dotenv": "^8.2.0",
-    "nodemon": "^2.0.4"
+    "dotenv": "^8.2.0"
   }
 }
